@@ -153,7 +153,7 @@ class Worker(Thread):
 		wait_interval()
 		browser.get('https://instagram.com/explore/tags/' + tag);
 		wait_interval()
-		browser.save_screenshot('screen.png')
+		#browser.save_screenshot('screen.png')
 		
 		first_photo = browser.find_element_by_xpath(XPATH_NEW_FIRST_PHOTO)
 			
