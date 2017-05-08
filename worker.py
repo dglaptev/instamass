@@ -19,7 +19,7 @@ class Worker(Thread):
 		
 		#logger config
 		logger = logging.getLogger(name)
-		hdlr = logging.FileHandler(name + '.log')
+		hdlr = logging.FileHandler('logs/' + name + '.log')
 		formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 		hdlr.setFormatter(formatter)
 		logger.addHandler(hdlr) 
@@ -58,8 +58,8 @@ class Worker(Thread):
 			
 			#Chrome
 			options = webdriver.chrome.options.Options()
-			#options.add_argument("--disable-extensions") # optional and off-topic, but it conveniently prevents the popup 'Disable developer mode extensions' 
-			#browser = webdriver.Chrome(chrome_options=options)
+			options.add_argument("--disable-extensions") # optional and off-topic, but it conveniently prevents the popup 'Disable developer mode extensions' 
+			browser = webdriver.Chrome(chrome_options=options)
 			
 			#Firefox
 			#browser = webdriver.Firefox()

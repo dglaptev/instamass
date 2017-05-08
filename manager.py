@@ -15,7 +15,7 @@ class Manager(Thread):
 		
 		#logger config
 		logger = logging.getLogger(self.name)
-		hdlr = logging.FileHandler(self.name + '.log')
+		hdlr = logging.FileHandler('logs/' + self.name + '.log')
 		formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 		hdlr.setFormatter(formatter)
 		logger.addHandler(hdlr) 
